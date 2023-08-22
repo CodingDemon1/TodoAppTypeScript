@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Todo App</title>
+</head>
+<style>
+    .disable {
+        display: none;
+    }
+</style>
+
+<body>
+
+    <h1 class="text-blue-900 text-center text-2xl font-bold m-2">Todo App</h1>
+
+    <nav class="py-4 bg-purple-400">
+        <ul class="flex justify-center">
+            <li class="mx-2 cursor-pointer hover:text-white" id="allTaskBtn">View All Tasks</li>
+            <li class="mx-2 cursor-pointer  hover:text-white" id="completedTaskBtn">Completed</li>
+        </ul>
+    </nav>
+    <div id="firstContainer">
+        <div class="flex justify-center m-4">
+            <label for="taskTitle" class="text-gray-700 p-1">Add New Task :</label>
+            <input class="border-solid border-1 border-purple-400 rounded-md px-3 mx-3" type="text" id="taskTitle"
+                placeholder="Enter task title here...">
+            <button class="rounded-md bg-purple-400 px-4 py-1 hover:bg-purple-500 hover:text-white"
+                id="addTaskButton">Add
+                Task</button>
+        </div>
+
+        <div class="mainTable flex-col items-center justify-center">
+            <h2 class="text-blue-900 text-center text-2xl font-bold m-2">All Tasks</h2>
+            <table class="table-fixed border-collapse border-2 m-auto">
+                <thead>
+                    <tr class="bg-blue-300">
+                        <th class="p-2 border-solid border-2">Name</th>
+                        <th class="p-2 border-solid border-2">Status</th>
+                        <!-- <th class="p-2 border-solid border-2">Priority</th> -->
+                        <th class="p-2 border-solid border-2">Mark Completed</th>
+                        <th class="p-2 border-solid border-2">Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="taskList">
+                    <tr>
+                        <td>Tasks </td>
+                        <td>Will be</td>
+                        <td>Displayed</td>
+                        <td>Here</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="secondContainer" class="disable">
+        <h2 class="text-blue-900 text-center text-2xl font-bold m-2">All Completed Tasks</h2>
+        <table class="table-fixed border-collapse border-2 m-auto">
+            <thead>
+                <tr class="bg-blue-300">
+                    <th class="p-2 border-solid border-2">Name</th>
+                    <th class="p-2 border-solid border-2">Status</th>
+
+                    <th class="p-2 border-solid border-2">Delete</th>
+                </tr>
+            </thead>
+            <tbody id="completedTaskList">
+                <tr>
+                    <td>Tasks </td>
+                    <td>Will be</td>
+                    <td>Displayed</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <script type="module" src="app.js"></script>
+
+</body>
+
+</html>
